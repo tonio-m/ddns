@@ -1,6 +1,6 @@
 # DDNS
 
-Use:
+Usage:
 
 ```
 # install serverless framework binary
