@@ -2,7 +2,7 @@
 
 Usage:
 
-```
+```bash
 # install serverless framework binary
 curl -o- -L https://slss.io/install | bash
 
