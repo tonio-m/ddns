@@ -1,0 +1,23 @@
+service: ddns
+frameworkVersion: '2 || 3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  lambdaHashingVersion: '20201221'
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+       - route53:Get*
+       - route53:List*
+       - route53:TestDNSAnswer
+       - route53:ChangeResourceRecordSets
+      Resource: "*"
+
+functions:
+  update-route53:
+    handler: update_route53.main
+    events:
+      - httpApi:
+          path: /
+          method: get
