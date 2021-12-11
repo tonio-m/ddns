@@ -20,9 +20,7 @@ serverless deploy | grep -A1 endpoints:
 # send a get request to the endpoint to update the DNS record with your ip!!
 curl https://zf8p10v2yi.execute-api.us-east-1.amazonaws.com/
 
-
-
-# run a background job to update it constantly:
+# OR run a background job to update it constantly:
 while true
 do
     wget -qO- https://zf8p10v2yi.execute-api.us-east-1.amazonaws.com/
