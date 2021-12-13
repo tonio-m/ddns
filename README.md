@@ -13,6 +13,7 @@ curl -o- -L https://slss.io/install | bash
 # RECORD_TTL = 300
 
 # deploy the lambda funcion on your aws account
+# be sure your aws cli is properly configured before doing this. to do this run `aws configure`
 serverless deploy | grep -A1 endpoints: 
 # endpoints:
 #   GET - https://zf8p10v2yi.execute-api.us-east-1.amazonaws.com/
